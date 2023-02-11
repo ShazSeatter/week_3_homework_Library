@@ -1,0 +1,22 @@
+/* *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: dodgerblue;
+}
+
+.book-cards {
+    display: flex;
+}
+
+.book {
+    display: flex;
+}
+footer {
+    background-color: dodgerblue;
+} */

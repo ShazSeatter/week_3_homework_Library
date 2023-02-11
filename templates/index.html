@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+    {% for book in book_list %}
+
+    <div class="book-cards"> 
+        <div class="book">
+        <h3>Title:</h3>
+        </div>
+        <p>{{book.title}}</p>
+        
+        <h3>Author:</h3>
+        <p>{{book.author}}</p>
+        
+        <h3>Genre:</h3>
+        <p>{{book.genre}}</p>
+    </div>
+
+    <a href="/books/{{book_list.index(book)}}"> More Info </a>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}
+
+<!-- /orders/{{orders.index(order)}} -->
