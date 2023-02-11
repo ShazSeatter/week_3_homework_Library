@@ -1,6 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<section>
+    <form action="/books" method="POST">
+        <h3>Add Book</h3>
+        <div>
+            <label for="title">Tile:</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author">
+        </div>
+        <div>
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre">
+        </div>
+        <input type="submit">
+    </form>
+</section>
+
 
 <section>
     {% for book in book_list %}
@@ -20,7 +39,13 @@
 
     <a href="/books/{{book_list.index(book)}}"> More Info </a>
 
+    <form action="/books/{{ loop.index0 }}/delete" method="POST">
+        <input class="delete-button" type="submit" value="&#x1F5D1; Delete">
+    </form>
+    
     {% endfor %}
+
+  
 
 </section>
 

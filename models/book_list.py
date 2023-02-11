@@ -9,3 +9,9 @@ book_list = [book_1, book_2, book_3]
 
 def get_book_list():
     return book_list
+
+def add_new_book(book):
+    book_list.append(book)
+
+def delete_book(index):
+    book_list.pop(index)
