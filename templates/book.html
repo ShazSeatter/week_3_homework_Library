@@ -4,30 +4,34 @@
 
 <section>
 
-    <h1>Your Chosen Book</h1>
-    
-        <h3>Title:</h3>
-        <p>{{book.title}}</p>
+    <ul class="nav-links ">
+        <li><a class="nav-book-color" href="/">Back</a></li>
+    </ul>
+        <div class="book">
+            <h3 class="book-headings">Title:</h3>
+                <p>{{book.title}}</p>
+            
+            <h3 class="book-headings">Author:</h3>
+                <p>{{book.author}}</p>
+            
+            <h3 class="book-headings">Genre:</h3>
+                <p>{{book.genre}}</p>
+
+                {% if book.checked_out %}
+
+                    <p class="checked-in-out">This book is currently checked out ❌</p>
+                {% else %}
+
+                    <p class="checked-in-out">This book is currently checked in ✅</p>
+
+                {% endif %}
+
+            <h3 class="book-headings summary-heading">Book Summary</h3>
+                <p class="summary-paragraph">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero blanditiis voluptatem nesciunt accusamus necessitatibus vel optio aliquid tempore eligendi dignissimos. Iusto, laboriosam repudiandae. Rerum expedita deserunt beatae ut tempora hic! Blanditiis voluptatem nesciunt accusamus necessitatibus vel optio aliquid tempore eligendi dignissimos. 
+                </p>
         
-        <h3>Author:</h3>
-        <p>{{book.author}}</p>
-        
-        <h3>Genre:</h3>
-        <p>{{book.genre}}</p>
-
-        <div>
-            {% if book.checked_out %}
-
-                 <p>This book is currently checked out</p>
-            {% else %}
-
-                <p>This book is currently checked in</p>
-
-            {% endif %}
-
         </div>
-
-    </div>
 
 </section>
 
