@@ -1,22 +1,60 @@
-/* *,
+/* /* *,
 *:before,
 *:after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+} */
+
+body {
+    margin: 0;
 }
 
+header {
+      background-color: dodgerblue;
+}
 h1 {
-    background-color: dodgerblue;
+    margin: 0;
+    text-align:center;
+    color: white; 
+    padding-top: 1rem; 
 }
 
-.book-cards {
+.nav-links {
+    list-style-type: none; 
+    padding: 2rem 2rem 1rem 2rem; 
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: white; 
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.more-info {
+    color: black;
+}
+
+/* .book-cards {
     display: flex;
 }
 
 .book {
     display: flex;
+} */
+
+footer > p {
+    margin: 0; 
+    color: white; 
+    text-align: center; 
+    padding: 2rem; 
 }
 footer {
     background-color: dodgerblue;
-} */
+    
+} 
+

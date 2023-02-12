@@ -58,7 +58,7 @@
     </div>
 
 <!-- Display individual book in new html page -->
-    <a href="/books/{{book_list.index(book)}}"> More Info </a>
+    <a class="more-info" href="/books/{{book_list.index(book)}}"> More Info </a>
 
 <!-- Deleting Book from list -->
     <form action="/books/{{ loop.index0 }}/delete" method="POST">
