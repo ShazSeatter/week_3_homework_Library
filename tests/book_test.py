@@ -3,7 +3,7 @@ from models.book import Book
 
 class TestBook(unittest.TestCase):
     def setUp(self):
-        self.book = Book("The Lord of the Rings", "T R R Tolkien", "Fantasy")
+        self.book = Book("The Lord of the Rings", "T R R Tolkien", "Fantasy", True)
 
     def test_has_title(self):
         expect = "The Lord of the Rings"
@@ -19,3 +19,8 @@ class TestBook(unittest.TestCase):
         expected = "Fantasy"
         actual = self.book.genre
         self.assertEqual(expected, actual)
+
+    def test_is_checked_out(self):
+        expected = True
+        actual = self.book.checked_out
+        self.assertEqual(expected, actual) 
