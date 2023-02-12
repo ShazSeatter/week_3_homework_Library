@@ -1,7 +1,10 @@
 
 class Book:
-    def __init__(self, title, author, genre):
+    def __init__(self, title, author, genre, checked_out):
         self.title = title
         self.author = author
         self.genre = genre
-        self.is_checked_out = False
+        self.checked_out = checked_out
+
+
+        # IF BOOK CHECKED_OUT == TRUE

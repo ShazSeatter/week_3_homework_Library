@@ -2,6 +2,7 @@
 
 {% block content %}
 <section>
+    <!-- Submitting a form for adding a new book -->
     <form action="/books" method="POST">
         <h3>Add Book</h3>
         <div>
@@ -16,11 +17,18 @@
             <label for="genre">Genre:</label>
             <input type="text" id="genre" name="genre">
         </div>
+        <div>
+            <label for="checked_out">Checked Out?</label>
+            <input type="checkbox" name="check_out" id="checked_out">
+        </div>
+
         <input type="submit">
     </form>
+    <!-- end of form -->
+
 </section>
 
-
+<!-- display the books on the page  -->
 <section>
     {% for book in book_list %}
 
@@ -35,14 +43,28 @@
         
         <h3>Genre:</h3>
         <p>{{book.genre}}</p>
+
+        {% if book.checked_out %}
+            <p>Currently Checked Out</p>
+        {% else %}
+            <p>Currently Checked In</p>
+            <form action="/books/{{ loop.index0 }}/update" method="POST">
+                <label for="checked_out">Do you want to check this book out?</label>
+                <input type="checkbox" name="check_out" id="checked_out">
+                <input type="submit">
+            </form>
+        {% endif %}
+
     </div>
 
+<!-- Display individual book in new html page -->
     <a href="/books/{{book_list.index(book)}}"> More Info </a>
 
+<!-- Deleting Book from list -->
     <form action="/books/{{ loop.index0 }}/delete" method="POST">
         <input class="delete-button" type="submit" value="&#x1F5D1; Delete">
     </form>
-    
+
     {% endfor %}
 
   
