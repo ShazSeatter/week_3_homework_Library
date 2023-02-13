@@ -30,7 +30,6 @@ def add_book():
 def update(index):
     chosen_book = update_book_status(int(index))
     print(chosen_book)
-  
     checked_out_book = True if 'check_out' in request.form else False
     chosen_book.update({'checked_out' : checked_out_book})
     print(checked_out_book)

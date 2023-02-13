@@ -53,7 +53,6 @@
             {% if book.checked_out %}
                 <p class="checked-in-out">Currently Checked Out ❌</p>
              {% else %}
-
                 <p class="checked-in-out">Currently Checked In ✅</p>
                     <form action="/books/{{ loop.index0 }}/update" method="POST">
                         <label for="checked_out">Do you want to check this book out?</label>
@@ -78,5 +77,3 @@
 </section>
 
 {% endblock %}
-
-<!-- /orders/{{orders.index(order)}} -->
